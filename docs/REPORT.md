@@ -22,3 +22,19 @@ Web server launched succesfully.
 I launched a web server successfully in my PC, and it's linked to the Eureka services, so basically I can
 use eureka and redistribute tasks to the different machines connected tu the Eureka's server.
 
+|---------------------------------------------------------------------------------------------------|
+Now we change the default port for the account service to 4444 and launch another account service.
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+As we can see in the second image, there are two accounts services now.
+
+|---------------------------------------------------------------------------------------------------|
+Shutting down the account service hosted in port 2222
+![img_8.png](img_8.png)
+![img_9.png](img_9.png)
+
+|---------------------------------------------------------------------------------------------------|
+But if we fetch an account, the service keeps working, that is because the web server realizes the request
+in Eureka where there are services registered. It finds an account service that keeps running in port 4444
+and do the request through that machine.
+![img_10.png](img_10.png)
